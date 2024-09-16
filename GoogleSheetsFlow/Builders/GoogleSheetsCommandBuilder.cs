@@ -31,9 +31,11 @@ namespace GoogleSheetsFlow.SheetBuilder
             return _sheetOperations.AddSheet(sheetTitle); 
         }
 
-        public IGoogleSheetsContext AddRange(int sheetId, int startRowIndex, int endRowIndex)
+        public IGoogleSheetsContext AddRange(int sheetId, int startRowIndex, int endRowIndex, int startColumnIndex, 
+            int endColumnIndex, BooleanCondition condition, CellFormat format)
         {
-            return _rangeOperations.AddRange(sheetId, startRowIndex, endRowIndex); 
+            return _rangeOperations.AddRange(sheetId, startRowIndex, endRowIndex, startColumnIndex, endColumnIndex, condition,
+                format); 
         }
         
         public void ExecuteBatch()

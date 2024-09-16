@@ -1,10 +1,15 @@
 ﻿using System.Collections.Generic;
 using Google.Apis.Sheets.v4.Data;
-using GoogleSheetsFlow.SheetBuilder.Interfaces;
 using GoogleSheetsFlow.SheetBuilder.Reading;
 
 namespace GoogleSheetsFlow.SheetBuilder.SheetCommands
 {
+    public interface ISheetOperations
+    {
+        GoogleSheetsCommandBuilder AddSheet(string sheetTitle);
+        RangeOperations Ranges { get; }
+    }
+    
     public class SheetOperations : ISheetOperations
     {
         private readonly List<Request> _requests;

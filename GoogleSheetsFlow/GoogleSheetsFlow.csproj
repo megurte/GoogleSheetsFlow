@@ -84,12 +84,14 @@
         <Reference Include="System.Xml"/>
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Builders\ConditionBuilder.cs" />
+        <Compile Include="Builders\FormatBuilder.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="Services\GoogleSheetsServiceFactory.cs" />
-        <Compile Include="SheetBuilder\GoogleSheetsCommandBuilder.cs" />
-        <Compile Include="SheetBuilder\Interfaces\Interfaces.cs" />
-        <Compile Include="SheetBuilder\Reading\RangeOperations.cs" />
-        <Compile Include="SheetBuilder\SheetOperations\SheetOperations.cs" />
+        <Compile Include="Builders\GoogleSheetsCommandBuilder.cs" />
+        <Compile Include="Builders\Interfaces\Interfaces.cs" />
+        <Compile Include="Builders\Reading\RangeOperations.cs" />
+        <Compile Include="Builders\SheetOperations\SheetOperations.cs" />
         <Compile Include="TestClass.cs" />
     </ItemGroup>
     <ItemGroup>
@@ -97,7 +99,7 @@
       <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>
-      <Folder Include="SheetBuilder\Writing\" />
+      <Folder Include="Builders\Writing\" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
